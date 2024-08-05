@@ -1,7 +1,7 @@
 -- Legal
 print("\n\82" ..
 	"\x83===================================================\n" ..
-	"CandyMod v1.0 (c) 2024 Zibon \"PixL\" Badi\n" ..
+	"CandyMod v1.0.1 (c) 2024 Zibon \"PixL\" Badi\n" ..
 	"This add-on is licensed under the GNU Affero GPLv3\n" ..
 	"<https://www.gnu.org/licenses/agpl-3.0.en.html>\n" ..
 	"===================================================\n"
@@ -20,7 +20,7 @@ states[S_RING] = {
 
 local function candymod_colorize(mo)
 -- Pick one at random
-mo.color = P_RandomRange(1, #skincolors)
+mo.color = P_RandomRange(1, #skincolors - 1)
 end
 
 addHook("MobjSpawn", candymod_colorize, MT_RING)
